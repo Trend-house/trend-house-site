@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trend House — Elegant Collections</title>
+  <meta name="description" content="Trend House — Elegant fashion, home decor, luxury accessories and beauty products." />
+  <style>
+    :root{
+      --gold: #bfa46a;
+      --gold-deep: #a8863e;
+      --muted: #777;
+      --bg: #ffffff;
+      --text: #111;
+      --radius: 12px;
+      font-family: 'Segoe UI', Roboto, -apple-system, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);line-height:1.5}
+    a{text-decoration:none;color:inherit}
+
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;border-bottom:1px solid rgba(0,0,0,0.05)}
+    nav a{margin-left:20px;font-weight:600}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo svg{width:50px;height:50px}
+
+    .hero{display:grid;grid-template-columns:1fr 400px;align-items:center;padding:60px 40px;gap:40px;background:linear-gradient(180deg, rgba(191,164,106,0.08), rgba(191,164,106,0.02))}
+    .hero h1{font-size:2.5rem;margin:0}
+    .hero p{color:var(--muted)}
+    .btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:600;border:1px solid transparent;cursor:pointer;text-align:center}
+    .btn-primary{background:var(--gold);color:#fff;border-color:var(--gold)}
+    .btn-ghost{border:1px solid rgba(0,0,0,0.1)}
+
+    .wrap{max-width:1100px;margin:auto;padding:40px}
+
+    .section{margin:60px 0}
+    h2{text-align:center;margin-bottom:20px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+    .card{background:#fff;border:1px solid rgba(0,0,0,0.05);border-radius:14px;box-shadow:0 6px 14px rgba(0,0,0,0.04);overflow:hidden}
+    .card img{width:100%;height:200px;object-fit:cover}
+    .card h3{margin:12px;font-size:16px}
+    .price{margin:0 12px 12px;color:var(--gold-deep);font-weight:700}
+    .add{margin:0 12px 12px;padding:10px;width:calc(100% - 24px);border-radius:8px;border:1px solid rgba(0,0,0,0.08);cursor:pointer}
+
+    .masonry{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+    .masonry img{width:100%;height:200px;object-fit:cover;border-radius:12px}
+
+    form{background:#fff;border:1px solid rgba(0,0,0,0.05);border-radius:12px;padding:20px}
+    .field{margin-bottom:12px}
+    .field label{display:block;margin-bottom:4px}
+    .field input,.field textarea{width:100%;padding:10px;border:1px solid rgba(0,0,0,0.1);border-radius:8px}
+
+    footer{border-top:1px solid rgba(0,0,0,0.05);padding:20px;text-align:center;color:var(--muted);font-size:14px}
+
+    @media(max-width:800px){
+      .hero{grid-template-columns:1fr;padding:40px 20px;text-align:center}
+      header{flex-direction:column;gap:10px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0%" stop-color="#dcbf7a"/>
+            <stop offset="100%" stop-color="#bfa46a"/>
+          </linearGradient>
+        </defs>
+        <rect width="120" height="120" rx="20" fill="#fff" stroke="#eee"/>
+        <text x="20" y="80" font-size="48" font-family="Georgia,serif" fill="url(#g)" font-weight="700">TH</text>
+      </svg>
+      <div>
+        <strong>Trend House</strong><br>
+        <span style="font-size:12px;color:var(--muted)">Elegant Collections</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div>
+      <h1>Timeless Style. Modern Elegance.</h1>
+      <p>Curated fashion apparel, refined home decor, luxury accessories and beauty essentials — handcrafted for those with impeccable taste.</p>
+      <div style="margin-top:20px;">
+        <a href="#products" class="btn btn-primary">Shop Collection</a>
+        <a href="#about" class="btn btn-ghost">Learn More</a>
+      </div>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1520975910019-6f342f2d6b3f?q=80&w=800" alt="Elegant products" style="width:100%;border-radius:14px;box-shadow:0 8px 20px rgba(0,0,0,0.08)">
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section id="about" class="section">
+      <h2>About Trend House</h2>
+      <p style="text-align:center;color:var(--muted);max-width:700px;margin:auto">
+        Trend House curates elegant pieces across fashion, home decor, luxury accessories and beauty. Each item is selected for craftsmanship, timeless design and refined aesthetic.
+      </p>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Our Services</h2>
+      <div class="grid">
+        <div class="card"><h3>Ready-to-Wear</h3><p style="padding:0 12px 12px;color:var(--muted)">Seasonal collections, responsibly sourced fabrics.</p></div>
+        <div class="card"><h3>Home Styling</h3><p style="padding:0 12px 12px;color:var(--muted)">Elegant decor to elevate your living space.</p></div>
+        <div class="card"><h3>Luxury Accessories</h3><p style="padding:0 12px 12px;color:var(--muted)">Statement pieces that define style.</p></div>
+        <div class="card"><h3>Beauty Edit</h3><p style="padding:0 12px 12px;color:var(--muted)">Refined beauty essentials and gifts.</p></div>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <h2>Featured Products</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800" alt="">
+          <h3>Silk Signature Scarf</h3>
+          <p class="price">£79</p>
+          <button class="add">View</button>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1520975910019-6f342f2d6b3f?q=80&w=800" alt="">
+          <h3>Leather Clutch</h3>
+          <p class="price">£129</p>
+          <button class="add">View</button>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1495121605193-b116b5b09f3b?q=80&w=800" alt="">
+          <h3>Signature Scent Candle</h3>
+          <p class="price">£35</p>
+          <button class="add">View</button>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1526178613249-8c6f2a0d9f77?q=80&w=800" alt="">
+          <h3>Luxury Beauty Set</h3>
+          <p class="price">£89</p>
+          <button class="add">View</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2>Gallery</h2>
+      <div class="masonry">
+        <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=800" alt="">
+        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=800" alt="">
+        <img src="https://images.unsplash.com/photo-1471295253337-3ceaaedca402?q=80&w=800" alt="">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800" alt="">
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div style="display:grid;grid-template-columns:1fr 400px;gap:20px;align-items:start;">
+        <div>
+          <p style="color:var(--muted)">Have a question or need help with an order? Reach out and we'll respond within 24 hours.</p>
+          <p><strong>Email:</strong> Contact@trendhouse.uk</p>
+          <p><strong>Location:</strong> London, UK</p>
+        </div>
+        <form action="mailto:Contact@trendhouse.uk" method="post" enctype="text/plain">
+          <div class="field"><label>Name</label><input type="text" name="name" required></div>
+          <div class="field"><label>Email</label><input type="email" name="email" required></div>
+          <div class="field"><label>Message</label><textarea name="message" rows="5" required></textarea></div>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    © <span id="year"></span> Trend House — All rights reserved
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.add').forEach(btn => btn.addEventListener('click', () => {
+      alert('This is a demo. Add your real store or checkout later!');
+    }));
+  </script>
+</body>
+</html>
